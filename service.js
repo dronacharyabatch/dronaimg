@@ -360,7 +360,7 @@ http.createServer(function (req, res) {
 			if('/view' === uriParts[0]){
 				var reqData = QueryStringToJSON(decodeURIComponent(uriParts[1]));
 					viewPage(reqData, (page)=> {
-						res.writeHead(200, "text/html");
+						res.writeHead(200, "image/jpeg");
 						res.end(page);
 					});
 			}

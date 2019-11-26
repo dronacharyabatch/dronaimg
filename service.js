@@ -321,7 +321,7 @@ function processGroup(reqData, callback){
 	});
 }
 function viewPage(reqData, callback){
-	if(reqData.owner)
+	if(!reqData.owner)
 		reqData.owner = "Tharak";
 	reqData.owner = reqData.owner.replace('+', ' ');
 	var page ='<!DOCTYPE html><html lang="en"><head><title>Group Message</title><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"></head><body><div class="container"><div class="panel panel-primary"><div class="panel-heading">'+reqData.owner+'</div><div class="panel-body"><img class="img-responsive" src="'+reqData.MediaUrl+'" alt="Klematis"></div></div></div></body></html>';
